@@ -32,16 +32,11 @@ export const IndexPageTemplate = ({
                 <p>{description}</p>
               </div>
             </div>
-            <div className="column is-12">
+            <div className="is-12">
               <h3 className="has-text-weight-semibold is-size-2">
-                Latest stories
+                Work
               </h3>
               <BlogRoll />
-              <div className="column is-12 has-text-centered">
-                <Link className="btn" to="/blog">
-                  Read more
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -100,10 +95,6 @@ export const pageQuery = graphql`
           description
         }
         description
-        intro {
-          heading
-          description
-        }
       }
     }
   }

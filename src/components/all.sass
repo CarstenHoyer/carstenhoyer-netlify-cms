@@ -2,17 +2,29 @@
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
+$orange: #ED6A40
+$orange-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+$primary: $orange
+$primary-invert: $orange-invert
 $body-color: #333
-$black: #2b2523
+$black: #2b4448
 
 .navbar .navbar-menu
   box-shadow:none !important
 
+body p
+  color: $black
+
+.section
+  .content
+    h1
+      color: $orange
+    h3
+      color: $black
+  .subtitle
+    color: $black
+      
 .content .taglist
   list-style: none
   margin-bottom: 0
@@ -88,9 +100,9 @@ footer.footer
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-item-active-color: $orange-invert
+$menu-item-active-background-color:	$orange-invert
+$menu-list-border-left: 1px solid $orange-invert
 $menu-label-color: $white-ter
 
 
@@ -113,14 +125,25 @@ $menu-label-color: $white-ter
     display: inline
 
 // blog roll
+.blog-list-item.notification
+  border-radius: 0
+  box-shadow: none
+.post-meta-wrapper
+  display: flex
+  flex-direction: column
+.blog-list-item
+  width: 100%;
 .blog-list-item.is-featured
   background-color: #d6400033;
 .blog-list-item header
   display: flex;
-  margin-bottom: 1em;
 .blog-list-item .featured-thumbnail
-  flex-basis: 35%;
+  max-width: 40%;
+  min-width: 40%;
   margin: 0 1.5em 0 0;
+
+.featured-thumbnail div
+    max-height: 10em;
 
 
 @import "~bulma"
@@ -129,7 +152,8 @@ $menu-label-color: $white-ter
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
+    max-width: 40%
+    min-width: 40%
 
 +mobile
   .blog-list-item header
