@@ -1,7 +1,6 @@
 ---
 templateKey: blog-post
 title: Creative coding and data visualization
-description: an object recognition cctv.
 date: 2019-05-02T18:00:41.535Z
 featuredpost: true
 featuredimage: /img/vera_molnar.jpg
@@ -13,4 +12,4 @@ tags:
 ---
 ![Talk](/img/vera_molnar.jpg)
 
-Test
+I gave a short talk on experimental data visualization.
