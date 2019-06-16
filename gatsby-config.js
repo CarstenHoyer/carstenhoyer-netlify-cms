@@ -1,6 +1,6 @@
 var proxy = require('http-proxy-middleware')
 
-module.exports = {
+let cfg = {
   siteMetadata: {
     siteUrl: 'https://carstenhoyer.dk',
     title: 'Carsten Høyer',
@@ -98,3 +98,15 @@ module.exports = {
     )
   },
 }
+
+if (process.env.CONTEXT === "production") {
+  const googleAnalyticsCfg = {
+    resolve: "gatsby-plugin-google-analytics",
+    options: {
+      trackingId: "UA-142211678-1"
+    }
+  };
+  cfg.plugins.push(googleAnalyticsCfg);
+}
+
+module.exports = cfg
