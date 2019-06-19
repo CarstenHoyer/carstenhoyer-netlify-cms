@@ -13,3 +13,5 @@ tags:
 ![Talk](/img/vera_molnar.jpg)
 
 I gave a short talk on experimental data visualization.
+
+Here is the talk as a PDF (videos missing): [CCTalk.pdf](/docs/CCTalk.pdf)
